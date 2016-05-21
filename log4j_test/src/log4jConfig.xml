@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+	<appender name="appender" class="org.apache.log4j.FileAppender">
+		<param name="File" value="log-with-xml.txt" />
+		<param name="Append" value="false" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d [%t] %p - %m%n" />
+		</layout>
+	</appender>
+	<root>
+		<priority value="debug" />
+		<appender-ref ref="appender" />
+	</root>
+</log4j:configuration>
+<!-- 
+	文件以标准的XML声明作为开始，后面跟着指出DTD（文档类型定义）的DOCTYPE声明，它定义了XML文件的结构，
+	例如，什么元素可以嵌入在其他元素中等等。上面文件在log4j发行版的src/java/org/apache/log4j/xml目录中。 
+	接着看看封装所有元素的 log4j:configuration 元素，它在DOCTYPE声明中被指定为根元素
+	
+	这里创建一个名叫"ConsoleAppender"的 Appender，注意，你可以选择任何名字，该示例之所以选择"ConsoleAppender"，
+	完全是为了示例的设计。接着这个appender类以全名形式给出，经常用规范（fully qualified）类名。 
+	Appender必须具有一个指定的 name和class。嵌入在 Appender之内的是 layout元素，
+	这里它被指定为SimpleLayout。 Layout 必须具有一个 class属性。
+	
+	root元素必须存在且不能被子类化。示例中的优先级被设置为"debug"，设置appender饱含一个appender-ref元素。还有更多的属性或元素可以指定。
+	查看log4j发行版中的src/java/org/apache/log4j/xml/log4j.dtd以了解关于XML配置文件结构的更多信息.
+	可以用下面这种方法把配置信息文件读入到Java程序中:DOMConfigurator.configure("configurationfile.xml");    
+    DOMConfigurator 用一棵DOM树来初始化log4j环境。这里是示例中的XML配置文件：plainlog4jconfig.xml
+
+ -->    

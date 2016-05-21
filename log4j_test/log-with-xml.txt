@@ -1,0 +1,5 @@
+2013-10-11 17:19:39,710 [main] DEBUG - Here is some DEBUG
+2013-10-11 17:19:39,710 [main] INFO - Here is some INFO
+2013-10-11 17:19:39,710 [main] WARN - Here is some WARN
+2013-10-11 17:19:39,711 [main] ERROR - Here is some ERROR
+2013-10-11 17:19:39,711 [main] FATAL - Here is some FATAL

@@ -1,0 +1,3 @@
+com.unj.log4j.simple_test包下面是javaapplication的记录日志的方法，实现都比较简单，
+com.unj.log4j.external_file_test 是分别用xml和properties进行外部配置的日志配置方法，其配置文件分别对应于log4jConfig.properties和log4jConfig.xml
+log4jConfigDemo.properties这个文件是一个比较通用的日志配置，本项目中没有用到，只是拿来进行讲解，上面有很多注释，方便记忆学习。
