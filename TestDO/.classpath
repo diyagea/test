@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="E:/code-ref/jar包/log4j2/commons-lang3-3.4.jar"/>
+	<classpathentry kind="lib" path="E:/code-ref/jar包/log4j2/log4j-api-2.6.2.jar"/>
+	<classpathentry kind="lib" path="E:/code-ref/jar包/log4j2/log4j-core-2.6.2.jar"/>
+	<classpathentry kind="lib" path="E:/code-ref/jar包/log4j2/slf4j-api-1.7.13.jar"/>
+	<classpathentry kind="lib" path="E:/code-ref/jar包/log4j2/slf4j-log4j12-1.7.9.jar"/>
+	<classpathentry kind="lib" path="E:/code-ref/jar包/jdbc-connector/sqlserver/jre7/sqljdbc41.jar"/>
+	<classpathentry kind="lib" path="E:/code-ref/jar包/jdbc-connector/mysql/mysql-connector-java-5.0.4-bin.jar"/>
+	<classpathentry kind="lib" path="E:/code-ref/jar包/dom4j/dom4j-1.6.1.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/JDK7"/>
+	<classpathentry kind="lib" path="E:/code-ref/jar包/json/fastjson-1.1.40.jar"/>
+	<classpathentry kind="lib" path="E:/code-ref/jar包/email/mail.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
