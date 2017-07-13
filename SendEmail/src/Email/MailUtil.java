@@ -17,7 +17,7 @@ import javax.mail.internet.MimeMessage;
 import javax.mail.internet.MimeMultipart;
 
 
-public class Mail { 
+public class MailUtil { 
 
 	private MimeMessage mimeMsg; //MIME邮件对象 
 	private Session session; //邮件会话对象 
@@ -32,7 +32,7 @@ public class Mail {
 	 * Constructor
 	 * @param smtp 邮件发送服务器
 	 */
-	public Mail(String smtp){ 
+	public MailUtil(String smtp){ 
 		setSmtpHost(smtp); 
 		createMimeMessage(); 
 	} 
@@ -236,7 +236,7 @@ public class Mail {
 	 * @return boolean
 	 */
 	public static boolean send(String smtp,String from,String to,String subject,String content,String username,String password) {
-		Mail theMail = new Mail(smtp);
+		MailUtil theMail = new MailUtil(smtp);
 		theMail.setNeedAuth(true); //需要验证
 		
 		if(!theMail.setSubject(subject)) return false;
@@ -262,7 +262,7 @@ public class Mail {
 	 * @return boolean
 	 */
 	public static boolean sendAndCc(String smtp,String from,String to,String copyto,String subject,String content,String username,String password) {
-		Mail theMail = new Mail(smtp);
+		MailUtil theMail = new MailUtil(smtp);
 		theMail.setNeedAuth(true); //需要验证
 		
 		if(!theMail.setSubject(subject)) return false;
@@ -289,7 +289,7 @@ public class Mail {
 	 * @return
 	 */
 	public static boolean send(String smtp,String from,String to,String subject,String content,String username,String password,String filename) {
-		Mail theMail = new Mail(smtp);
+		MailUtil theMail = new MailUtil(smtp);
 		theMail.setNeedAuth(true); //需要验证
 		
 		if(!theMail.setSubject(subject)) return false;
@@ -317,7 +317,7 @@ public class Mail {
 	 * @return
 	 */
 	public static boolean sendAndCc(String smtp,String from,String to,String copyto,String subject,String content,String username,String password,String filename) {
-		Mail theMail = new Mail(smtp);
+		MailUtil theMail = new MailUtil(smtp);
 		theMail.setNeedAuth(true); //需要验证
 		
 		if(!theMail.setSubject(subject)) return false;
@@ -342,7 +342,7 @@ public class Mail {
 		String username="diyagea@126.com";//用户名
 		String password="wang0312!!";//密码
 	 	String filename = "D:\\jar\\javamail-1.4.5\\NOTES.txt";//附件路径，如：F:\\笔记<a>\\struts2</a>与mvc.txt
-		Mail.sendAndCc(smtp, from, to, copyto, subject, content, username, password, filename);
+		MailUtil.sendAndCc(smtp, from, to, copyto, subject, content, username, password, filename);
 	}
 
 } 
