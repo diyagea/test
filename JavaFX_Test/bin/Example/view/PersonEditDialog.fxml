@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="357.0" prefWidth="408.0" styleClass="background" stylesheets="@DarkTheme.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Example.view.PersonEditDialogController">
+<AnchorPane prefHeight="357.0" prefWidth="408.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Example.view.PersonEditDialogController">
    <children>
       <GridPane layoutX="41.0" layoutY="38.0" prefHeight="238.0" prefWidth="310.0">
         <columnConstraints>
@@ -32,7 +32,7 @@
             <TextField fx:id="streetField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
             <TextField fx:id="cityField" GridPane.columnIndex="1" GridPane.rowIndex="3" />
             <TextField fx:id="postalCodeField" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-            <TextField fx:id="birthdayField" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <DatePicker fx:id="birthdayPicker" prefHeight="23.0" prefWidth="231.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
          </children>
       </GridPane>
       <Button defaultButton="true" layoutX="214.0" layoutY="307.0" mnemonicParsing="false" onAction="#handleOk" prefHeight="33.0" prefWidth="79.0" text="OK" />
