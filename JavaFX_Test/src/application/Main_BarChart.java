@@ -18,7 +18,7 @@ import javafx.stage.Stage;
  * @author diyagea- Allen.Wang
  *
  */
-public class Main2 extends Application {
+public class Main_BarChart extends Application {
 
     public static void main(String[] args) {
         launch(args);
