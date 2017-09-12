@@ -1,8 +1,10 @@
 package DBUtil;
  
-import java.io.IOException;
-import java.io.InputStream;
+import java.io.FileInputStream;
 import java.util.Properties;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
  
 /**
  * 数据库配置文件读取方法
@@ -10,26 +12,33 @@ import java.util.Properties;
  *
  */
 public class DBConfig {
-     
+    
+	protected static Logger logger = LogManager.getLogger(DBConfig.class);
     private String driver;
     private String url;
     private String userName;
     private String password;
      
     public DBConfig() {
-        InputStream inputStream = this.getClass().getClassLoader().getResourceAsStream("DBUtil/dbConfig.properties");
-        Properties p=new Properties();
-        try {
-            p.load(inputStream);
-            this.driver=p.getProperty("driver");
-            this.url=p.getProperty("url");
-            this.userName=p.getProperty("username");
-            this.password=p.getProperty("password");
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-         
-    }
+		String path = System.getProperty("user.dir").replace("\\", "/") + "/resources/config/dbConfig.properties";
+		// InputStream inputStream =
+		// this.getClass().getClassLoader().getResourceAsStream("DBUtil/dbConfig.properties");
+		// InputStream inputStream =
+		// this.getClass().getClassLoader().getResourceAsStream(path);
+
+		try {
+			FileInputStream inputStream = new FileInputStream(path);
+			Properties p = new Properties();
+			p.load(inputStream);
+			this.driver = p.getProperty("driver");
+			this.url = p.getProperty("url");
+			this.userName = p.getProperty("username");
+			this.password = p.getProperty("password");
+		} catch (Exception e) {
+			logger.error(e.getMessage(), e);
+		}
+
+	}
      
     public String getDriver() {
         return driver;
