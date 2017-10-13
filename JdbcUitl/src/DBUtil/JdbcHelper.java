@@ -13,6 +13,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 /**
  * JDBC访问辅助类
  * 
@@ -515,8 +518,17 @@ public class JdbcHelper {
 	 * @throws Exception
 	 */
 	public static void main(String[] args) throws Exception {
+		long startTime=System.currentTimeMillis();//记录开始时间
 		// 测试数据库连接
-		System.out.println(testConn());
+		//System.out.println(testConn());
+		Logger logger = LogManager.getLogger(JdbcHelper.class);
+		logger.info(testConn());
+
+		long endTime=System.currentTimeMillis();//记录结束时间
+
+		float excTime=(float)(endTime-startTime)/1000;
+
+		System.out.println("执行时间："+excTime+"s");
 	}
 
 }

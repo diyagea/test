@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import org.controlsfx.control.*?>
+<?import com.jfoenix.validation.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="851.0" prefWidth="1296.0" stylesheets="@application.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="JFoenix.JFoenixController">
+   <children>
+      <VBox layoutX="377.0" layoutY="249.0" prefHeight="851.0" prefWidth="1296.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="132.0" prefWidth="1150.0" spacing="30.0">
+               <children>
+                  <JFXRippler>
+                     <children>
+                        <Label fx:id="label" text="Label" />
+                     </children>
+                  </JFXRippler>
+                  <JFXButton ripplerFill="#26ee14" styleClass="button-raised" text="Submit" />
+                  <JFXCheckBox styleClass="custom-jfx-check-box" stylesheets="@application.css" text="CheckBox" />
+                  <JFXComboBox fx:id="jfxCombo" prefHeight="23.0" prefWidth="183.0" />
+                  <JFXHamburger fx:id="h1" />
+                  <JFXTextField fx:id="input1" labelFloat="true" promptText="Floating prompt" />
+                  <JFXTextField fx:id="input2" promptText="With Validation..." />
+                  <JFXTextField fx:id="input3" promptText="Validation Number" />
+               </children>
+               <padding>
+                  <Insets left="10.0" right="10.0" />
+               </padding>
+               <opaqueInsets>
+                  <Insets left="10.0" right="10.0" />
+               </opaqueInsets>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="30.0">
+               <children>
+                  <Group>
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <JFXRadioButton fx:id="radio1" text="JavaFX" />
+                              <JFXRadioButton fx:id="radio2" text="JFoenix" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </Group>
+                  <JFXSpinner />
+                  <JFXTabPane>
+                     <tabs>
+                        <Tab text="Tab1">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <Label text="111111111" />
+                                 </children></AnchorPane>
+                          </content>
+                        </Tab>
+                        <Tab text="Tab2">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <Label text="222222222" />
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                     </tabs>
+                  </JFXTabPane>
+                  <JFXToggleButton fx:id="toggle" text="ToggleButton" />
+                  <JFXListView fx:id="listView" styleClass="mylistview" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
