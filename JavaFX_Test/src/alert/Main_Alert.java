@@ -1,4 +1,4 @@
-package application;
+package alert;
 
 
 import java.io.FileNotFoundException;
@@ -41,16 +41,16 @@ public class Main_Alert extends Application {
     }
     @Override
     public void start(Stage primaryStage) {
-    	infoDialogWithHeader();
-    	infoDialogWithOutHeader();
-    	warningDialog();
-    	errorDialog();
+//    	infoDialogWithHeader();
+//    	infoDialogWithOutHeader();
+//    	warningDialog();
+//    	errorDialog();
     	exceptionDialog();
-    	confirmDialog();
-    	actionConfirmDialog();
-    	inputDialog();
-    	choiceDialog();
-    	loginDialog();
+//    	confirmDialog();
+//    	actionConfirmDialog();
+//    	inputDialog();
+//    	choiceDialog();
+//    	loginDialog();
     }
     
     void infoDialogWithHeader(){

@@ -1,4 +1,4 @@
-package application;
+package barchart;
 
 
 import java.util.Arrays;
