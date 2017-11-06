@@ -434,6 +434,39 @@ public class JdbcHelper {
 		}
 		return result;
 	}
+	/**
+	 * 批量更新数据
+	 * 
+	 * @param sqlList
+	 *            一组sql
+	 * @return
+	 */
+	public static int[] batchUpdate(String... parameters) {
+
+		int[] result = new int[] {};
+		Statement statenent = null;
+		try {
+			conn = JdbcUtil.getConnection();
+			conn.setAutoCommit(false);
+			statenent = conn.createStatement();
+			for (String sql : parameters) {
+				statenent.addBatch(sql);
+			}
+			result = statenent.executeBatch();
+			conn.commit();
+		} catch (SQLException e) {
+			try {
+				conn.rollback();
+			} catch (SQLException e1) {
+				// TODO Auto-generated catch block
+				throw new ExceptionInInitializerError(e1);
+			}
+			throw new ExceptionInInitializerError(e);
+		} finally {
+			free(statenent, null);
+		}
+		return result;
+	}
 
 	/**
 	 * ResultSet转化为List<Map>
