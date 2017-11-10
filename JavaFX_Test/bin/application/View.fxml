@@ -5,9 +5,13 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="328.0" prefWidth="352.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MyControll">
+<AnchorPane prefHeight="444.0" prefWidth="505.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MyControll">
    <children>
       <Button fx:id="myButton" layoutX="51.0" layoutY="41.0" mnemonicParsing="false" onAction="#showDateTime" text="Show TIme" />
       <TextField fx:id="myTextField" layoutX="51.0" layoutY="117.0" />
+      <ComboBox fx:id="comboBox" layoutX="56.0" layoutY="214.0" onAction="#selectOption" prefWidth="150.0" promptText="choose your like" />
+      <TextArea fx:id="logBox" layoutX="253.0" layoutY="186.0" prefHeight="200.0" prefWidth="200.0" />
+      <RadioButton fx:id="radio1" layoutX="297.0" layoutY="77.0" mnemonicParsing="false" text="男" />
+      <RadioButton fx:id="radio2" layoutX="363.0" layoutY="77.0" mnemonicParsing="false" text="女" />
    </children>
 </AnchorPane>
