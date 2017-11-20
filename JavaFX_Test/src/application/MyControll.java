@@ -35,6 +35,9 @@ public class MyControll implements Initializable {
 	//单选框
 	private ToggleGroup group;
 	
+	/* (non-Javadoc)
+	 * @see javafx.fxml.Initializable#initialize(java.net.URL, java.util.ResourceBundle)
+	 */
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 
@@ -55,7 +58,8 @@ public class MyControll implements Initializable {
 		radio2.setToggleGroup(group);
 		radio1.setUserData("1");
 		radio2.setUserData("2");
-
+		//设置默认选中
+		group.selectToggle(radio2);
 	}
 
 	// When user click on myButton
