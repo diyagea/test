@@ -27,34 +27,38 @@ public class Main_BarChart extends Application {
     public void start(Stage primaryStage) {
     	
         Group root = new Group();
-           
+        
+        //get object X/Y of chart
         final CategoryAxis xAxis = new CategoryAxis();
         final NumberAxis yAxis = new NumberAxis();
-           
+        
+        //set X/Y title
         xAxis.setLabel("TDM Tools");
+        yAxis.setLabel("Tool Life Value");
+        
+        //set X column name
         xAxis.setCategories(FXCollections.<String> observableArrayList(Arrays.asList(
                 "Tool-001", 
                 "Tool-002",
                 "Tool-003", 
                 "Tool-004",
                 "Tool-005")));
-        yAxis.setLabel("Tool Life Value");
            
         final StackedBarChart<String,Number> stackedBarChart = new StackedBarChart<String,Number>(xAxis,yAxis);
         stackedBarChart.setTitle("Statistics TOP5");
           
+        //data1
         XYChart.Series<String,Number> series1 = new XYChart.Series();
         series1.setName("Tool Left Life");
-           
         series1.getData().add(new XYChart.Data("Tool-001", 80));
         series1.getData().add(new XYChart.Data("Tool-002", 69));
         series1.getData().add(new XYChart.Data("Tool-003", 63));
         series1.getData().add(new XYChart.Data("Tool-004", 52));
         series1.getData().add(new XYChart.Data("Tool-005", 45));
-          
+        
+        //data2
         XYChart.Series<String,Number> series2 = new XYChart.Series();
         series2.setName("Tool Usage Life");
-           
         series2.getData().add(new XYChart.Data("Tool-001", 20));
         series2.getData().add(new XYChart.Data("Tool-002", 31));
         series2.getData().add(new XYChart.Data("Tool-003", 37));
